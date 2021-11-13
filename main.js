@@ -1,3 +1,4 @@
+
 var canvas = new fabric.Canvas("myCanvas");
 
 ball_x = 0;
@@ -21,7 +22,7 @@ function load_img(){
     });
 	new_image();
 }
-function load_img()
+function new_image()
 {
 	fabric.Image.fromURL("ball.png", function (Img){
         ball_object = Img;
@@ -71,7 +72,7 @@ function my_keydown(e)
 			console.log("Block Image Height = "+block_image_height);
 			console.log("Up Key Pressed x ="+ball_x+",y = "+ball_y);
 			canvas.remove(ball_object);
-			load_img();
+			new_image();
 		}
 	}
 	function down()
@@ -81,7 +82,7 @@ function my_keydown(e)
 			console.log("Block Image Height = "+block_image_height);
 			console.log("Down Key Pressed x ="+ball_x+",y = "+ball_y);
 			canvas.remove(ball_object);
-			load_img();
+			new_image();
 		 }
 	}
 	function left()
@@ -92,7 +93,7 @@ function my_keydown(e)
 			console.log("Block Image Width = "+block_image_width);
 			console.log("Left Key Pressed x ="+ball_x+",y = "+ball_y);
 			canvas.remove(ball_object);
-			load_img();
+			new_image();
 		}
 	}
 
@@ -104,13 +105,7 @@ function my_keydown(e)
 			console.log("Block Image Width = "+block_image_width);
 			console.log("Right Key Pressed x ="+ball_x+",y = "+ball_y);
 			canvas.remove(ball_object);
-			load_img();
+			new_image();
 		}
 	}
-}
-
-if(ball_x == hole_x)(ball_y == hole_y)
-{
-document.getElementById("hd3").innerHTML = "The ball hit the goal ! You won" ;
-canvas.remove(ball_object);
 }
